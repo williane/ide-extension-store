@@ -19,6 +19,7 @@ header {
   justify-content: center;
   border-bottom: 1px solid #252131;
 }
+
 header > strong {
   font-size: 13px;
   font-weight: 400;
@@ -38,7 +39,7 @@ header > strong {
   display: block;
 }
 
-button {
+.window-action > button {
   -webkit-app-region: no-drag;
   border: 0;
   width: 12px;
@@ -49,26 +50,26 @@ button {
   justify-content: center;
 }
 
-button + button {
+.window-action > button + button {
   margin-left: 8px;
 }
 
-button svg {
+.window-action > button svg {
   width: 8px;
   height: 8px;
   opacity: 0.9;
   display: none;
 }
 
-button:hover svg {
+.window-action > button:hover svg {
   display: block;
 }
 
-button:active {
+.window-action > button:active {
   opacity: 0.6;
 }
 
-button:focus {
+.window-action > button:focus {
   outline: 0;
 }
 
@@ -82,4 +83,85 @@ button:focus {
 
 .maximize {
   background: #67e480;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 5vw 95vw;
+  grid-template-rows: 1fr;
+  grid-template-areas: "aside main";
+  width: 100%;
+  height: 100%;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  grid-area: "aside";
+  width: 100%;
+  min-width: 68.3px;
+  max-width: 68.5px;
+  border-right: 1px solid #252131;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.menu-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.menu-icon {
+  height: 2rem;
+}
+
+#git {
+  height: 2.5rem;
+}
+
+#connect {
+  border-radius: 50%;
+}
+
+.dhl-icon {
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4rem;
+  width: 4rem;
+}
+
+.menu-icon-wrapper:hover {
+  background: #201b2d;
+  border-left: 3px solid red;
+}
+
+main {
+  grid-area: "main";
+  width: 100%;
+  height: 100%;
+  /* background-color: #e1e1e6; */
+}
+
+.not-active {
+  display: none;
+}
+
+.menu-active {
+  background: #201b2d;
+  border-left: 3px solid red;
 }
