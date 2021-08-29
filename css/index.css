@@ -125,6 +125,11 @@ aside {
   padding-right: 1rem;
 }
 
+.menu-icon-wrapper:hover {
+  background: #201b2d;
+  border-left: 3px solid red;
+}
+
 .menu-icon {
   height: 2rem;
 }
@@ -137,17 +142,24 @@ aside {
   border-radius: 50%;
 }
 
-.dhl-icon {
+.user-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 2rem;
+}
+
+.dhl-icon {
+  margin-bottom: 0.5rem;
   margin-left: auto;
   margin-right: auto;
   height: 4rem;
   width: 4rem;
 }
 
-.menu-icon-wrapper:hover {
-  background: #201b2d;
-  border-left: 3px solid red;
+#username {
+  font-size: 0.8rem;
 }
 
 main {

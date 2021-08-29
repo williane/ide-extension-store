@@ -1,4 +1,10 @@
-const { app, BrowserWindow, ipcMain, screen } = require("electron");
+const {
+  app,
+  BrowserWindow,
+  BrowserView,
+  ipcMain,
+  screen,
+} = require("electron");
 
 let mainWindow = null;
 
@@ -40,4 +46,22 @@ ipcMain.on("maximize-window-mac", () => {
   } else {
     mainWindow.unmaximize();
   }
+});
+
+ipcMain.on("bu-it-open", () => {
+  const view = new BrowserView();
+  const { width: currentWidth, height: currentHeight } = mainWindow.getBounds();
+
+  mainWindow.setBrowserView(view);
+  view.setBounds({
+    x: 70,
+    y: 40,
+    width: currentWidth - 70,
+    height: currentHeight - 40,
+  });
+  view.webContents.loadURL("http://usqasws0586:9000");
+});
+
+ipcMain.on("bu-it-close", () => {
+  mainWindow.setBrowserView(null);
 });
