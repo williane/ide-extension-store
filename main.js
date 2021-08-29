@@ -69,3 +69,22 @@ ipcMain.on("bu-it-open", () => {
 ipcMain.on("bu-it-close", () => {
   mainWindow.setBrowserView(null);
 });
+
+ipcMain.on("ide-open", () => {
+  mainWindow.setBrowserView(null);
+  const view = new BrowserView();
+  const { width: currentWidth, height: currentHeight } = mainWindow.getBounds();
+
+  mainWindow.setBrowserView(view);
+  view.setBounds({
+    x: 70,
+    y: 40,
+    width: currentWidth - 70,
+    height: currentHeight - 40,
+  });
+  view.setAutoResize({
+    width: true,
+    height: true,
+  });
+  view.webContents.loadFile("ideExtension.html");
+});

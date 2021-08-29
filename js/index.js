@@ -7,6 +7,7 @@ const btnMaximize = document.querySelector(".maximize");
 const menuWrapper = document.querySelectorAll(".menu-icon-wrapper");
 const menuBuIt = document.querySelector("#bu-it");
 const menuGit = document.querySelector("#git-wrapper");
+const menuIde = document.querySelector("#ide-extension");
 const labelUsername = document.querySelector("#username");
 
 const userName = process.env["USERPROFILE"].split(path.sep)[2];
@@ -41,4 +42,10 @@ menuGit.onclick = () => {
   removeClassActive();
   menuGit.classList.add("menu-active");
   ipcRenderer.send("bu-it-close");
+};
+
+menuIde.onclick = () => {
+  removeClassActive();
+  menuIde.classList.add("menu-active");
+  ipcRenderer.send("ide-open");
 };

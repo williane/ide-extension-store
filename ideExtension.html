@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/reset-ide.css" />
+    <link rel="stylesheet" href="./css/ide-extension.css" />
+    <link rel="stylesheet" href="./css/animation-loading.css" />
+
+    <title>IDE - Extension Store</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logoWrapper">
+          <img class="logo" src="./assets/logo.svg" alt="logo dhl" />
+          <img
+            class="logo-secundary"
+            src="./assets/logo_secundary.svg"
+            alt="logo dhl"
+          />
+        </div>
+        <div class="login">
+          <span id="user-id"></span>
+          <img src="./assets/login.png" alt="imagem login" />
+        </div>
+      </header>
+      <main>
+        <div class="content">
+          <div class="title">IDE - Extension Store</div>
+          <div class="files">
+            <form class="extension">
+              <label id="git"
+                ><span>Git Clone: &nbsp;</span
+                ><input
+                  id="gitClone"
+                  type="text"
+                  value="https://dhl-supply-chain@dev.azure.com/dhl-supply-chain/WMS/_git/"
+                  required
+                  disable
+                  readonly
+              /></label>
+              <label id="instance"
+                ><span>Instance: &nbsp;</span>
+                <select name="instance"></select
+              ></label>
+              <label id="commit-message"
+                ><span>Commit Message: &nbsp;</span
+                ><input id="git-commit" type="text" required
+              /></label>
+              <label id="extension"
+                ><span>Extension: &nbsp;</span
+                ><input
+                  id="input_extension"
+                  type="text"
+                  placeholder="If in blank system genereted automatically"
+              /></label>
+              <label id="files"
+                ><span>Files: &nbsp;</span
+                ><input id="file" type="file" multiple="multiple" required
+              /></label>
+            </form>
+            <div class="files-choosed"></div>
+            <button class="btn-genereted">Generate</button>
+            <div class="load-files not-active">
+              <span id="loading">Gerando extension...</span>
+              <div id="outer-barG">
+                <div id="front-barG" class="bar-animationG">
+                  <div id="barG_1" class="bar-lineG"></div>
+                  <div id="barG_2" class="bar-lineG"></div>
+                  <div id="barG_3" class="bar-lineG"></div>
+                  <div id="barG_4" class="bar-lineG"></div>
+                  <div id="barG_5" class="bar-lineG"></div>
+                </div>
+              </div>
+            </div>
+            <div class="files-loaded not-active">
+              <span class="success">
+                Extension store gerada com sucesso e arquivos copiados para o
+                repositorio Git!
+              </span>
+              <button class="concluded">Concluded</button>
+            </div>
+          </div>
+          <div class="log"></div>
+        </div>
+      </main>
+      <footer>
+        <span class="copyright">©</span>
+        <span>&nbsp;BU IT - Brazil</span>
+      </footer>
+    </div>
+    <script>
+      require("./js/ide-extension");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+#outer-barG {
+  height: 26px;
+  width: 360px;
+  border: 2px solid rgb(0, 0, 0);
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  /* margin: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+
+.bar-lineG {
+  background-color: rgb(0, 0, 0);
+  float: left;
+  width: 18px;
+  height: 117px;
+  margin-right: 23px;
+  margin-top: -27px;
+  transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+
+.bar-animationG {
+  margin-left: 164px;
+  width: 164px;
+  animation-name: bar-animationG;
+  -o-animation-name: bar-animationG;
+  -ms-animation-name: bar-animationG;
+  -webkit-animation-name: bar-animationG;
+  -moz-animation-name: bar-animationG;
+  animation-duration: 2.24s;
+  -o-animation-duration: 2.24s;
+  -ms-animation-duration: 2.24s;
+  -webkit-animation-duration: 2.24s;
+  -moz-animation-duration: 2.24s;
+  animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-direction: normal;
+  -o-animation-direction: normal;
+  -ms-animation-direction: normal;
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+}
+
+@keyframes bar-animationG {
+  0% {
+    margin-left: 151px;
+    margin-top: -18px;
+  }
+
+  100% {
+    margin-left: -125px;
+    margin-top: -18px;
+  }
+}
+
+@-o-keyframes bar-animationG {
+  0% {
+    margin-left: 151px;
+    margin-top: -18px;
+  }
+
+  100% {
+    margin-left: -125px;
+    margin-top: -18px;
+  }
+}
+
+@-ms-keyframes bar-animationG {
+  0% {
+    margin-left: 151px;
+    margin-top: -18px;
+  }
+
+  100% {
+    margin-left: -125px;
+    margin-top: -18px;
+  }
+}
+
+@-webkit-keyframes bar-animationG {
+  0% {
+    margin-left: 151px;
+    margin-top: -18px;
+  }
+
+  100% {
+    margin-left: -125px;
+    margin-top: -18px;
+  }
+}
+
+@-moz-keyframes bar-animationG {
+  0% {
+    margin-left: 151px;
+    margin-top: -18px;
+  }
+
+  100% {
+    margin-left: -125px;
+    margin-top: -18px;
+  }
+}
