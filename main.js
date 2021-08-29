@@ -59,6 +59,10 @@ ipcMain.on("bu-it-open", () => {
     width: currentWidth - 70,
     height: currentHeight - 40,
   });
+  view.setAutoResize({
+    width: true,
+    height: true,
+  });
   view.webContents.loadURL("http://usqasws0586:9000");
 });
 
